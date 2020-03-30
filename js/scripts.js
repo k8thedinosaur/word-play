@@ -18,6 +18,12 @@ $(document).ready(function() {
     });
     console.log(longWords);
 
+    reversedLongWords = longWords.reverse();
+    console.log(reversedLongWords);
+
+    newSentence = reversedLongWords.join(" ");
+    console.log(newSentence);
+
 
 
     event.preventDefault();
