@@ -11,17 +11,22 @@ $(document).ready(function() {
     // })
     // console.log(wordLengths);
 
-    longWords = words.map(function(word) {
+    var longWords = words.map(function(word) {
       if (word.length > 3) {
         return word;
       } 
     });
     console.log(longWords);
 
-    reversedLongWords = longWords.reverse();
+    var filteredLongWords = longWords.filter(function(word) {
+      return word != null;
+    });
+    console.log(filteredLongWords);
+
+    var reversedLongWords = filteredLongWords.reverse();
     console.log(reversedLongWords);
 
-    newSentence = reversedLongWords.join(" ");
+    var newSentence = reversedLongWords.join(" ");
     console.log(newSentence);
 
 
