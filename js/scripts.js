@@ -6,10 +6,12 @@ $(document).ready(function() {
     var words = sentence.split(" ");
     console.log(words);
 
-    // wordLengths = words.forEach(function(word) {
-    //   return word.length;
-    // })
-    // console.log(wordLengths);
+    // var lastWord = words[words.length -1];
+    // console.log(lastWord);
+
+    // var noDot = lastWord.split();
+    // console.log(noDot);
+    // var noDot = noDot.pop();
 
     var longWords = words.map(function(word) {
       if (word.length > 3) {
@@ -29,7 +31,7 @@ $(document).ready(function() {
     var newSentence = reversedLongWords.join(" ");
     console.log(newSentence);
 
-
+    $("#result").append(newSentence);
 
     event.preventDefault();
   });
